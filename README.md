@@ -35,6 +35,11 @@ This foundational Python script scans the **my current working directory** and c
   - `size`: file size in bytes (integer)
 - Prints the final list of dictionaries to the console
 
+*Key Script Highlights:**
+- Uses `os.listdir()` to list files.
+- Uses `os.path.isfile()` to filter out folders.
+- Simple and ideal for small-scale, top-level file inspections.
+
 ---
 
 ## 💻 How to Run
@@ -43,3 +48,53 @@ Make sure you have Python 3 installed.
 
 ```bash
 python list_files.py
+
+### 🚀 Advanced Script
+
+The advanced script improves on the foundational version by:
+
+- Accepting an **optional directory path** as a parameter
+- Defaulting to current working directory if none is passed
+- **Recursively scanning** all subdirectories
+- Returning each file’s:
+  - `'name'`: file name
+  - `'path'`: full file path
+  - `'size'`: file size in bytes
+
+**Key Script Enhancements:**
+- Uses `os.walk()` for recursive traversal
+- Adds path flexibility and deep directory coverage
+- Better suited for audits, backups, and more complex use cases
+
+---
+
+### 🔍 Comparison Table
+
+| Feature              | Foundational                | Advanced                            |
+|----------------------|-----------------------------|--------------------------------------|
+| Parameter Support    | ❌ None                     | ✅ Optional `path` parameter         |
+| Recursion            | ❌ No                      | ✅ Yes (via `os.walk()`)            |
+| Path Output          | ❌ Filename only           | ✅ Full path included               |
+| File Filtering       | ✅ `os.path.isfile()`       | ✅ Recursive file validation        |
+| Flexibility          | ❌ Fixed to `cwd`           | ✅ Custom paths supported           |
+
+---
+
+### 💡 Usage
+
+```bash
+# Run the foundational script
+python list_files.py
+
+# Run the advanced script (current directory)
+python list_files_advanced.py
+
+# Run the advanced script on a specific path
+python list_files_advanced.py "C:/Users/Lamont/Documents"
+```
+
+---
+
+### 📌 Author
+Derrick Pope – Cloud Security Specialist & DevOps Enthusiast 🛡️⚙️  
+GitHub: [pettymurphy](https://github.com/pettymurphy)
