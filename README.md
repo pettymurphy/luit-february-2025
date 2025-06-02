@@ -92,6 +92,25 @@ python list_files_advanced.py
 # Run the advanced script on a specific path
 python list_files_advanced.py "C:/Users/Lamont/Documents"
 ```
+Boto3 Section
+
+## 📦 S3 Bucket Listing Script
+
+This Python script (`list_buckets.py`) uses the boto3 library to authenticate with AWS and list all S3 buckets associated with the configured credentials.
+
+### 🔧 What It Does
+- Uses `boto3.client('s3')` to connect to AWS S3
+- Calls `list_buckets()` to fetch all accessible buckets
+- Prints each bucket name to the terminal
+
+### ✅ Prerequisites
+- AWS CLI installed and `aws configure` run with valid credentials
+- boto3 installed (`pip install boto3`)
+- Python 3.13 interpreter selected in VS Code
+
+### 🚀 Run it
+```bash
+python list_buckets.py
 
 ---
 
